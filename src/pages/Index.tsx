@@ -906,6 +906,27 @@ const App = () => {
                     <input required placeholder={t.form_placeholder_name} className="bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase" />
                     <input required type="email" placeholder="CONTACT@EMAIL.COM" className="bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase" />
                   </div>
+                  <div className="flex gap-4 items-end">
+                    <select 
+                      value={phoneCode} 
+                      onChange={(e) => setPhoneCode(e.target.value)}
+                      className="bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase text-white w-[140px] shrink-0"
+                      style={{ backgroundColor: '#000' }}
+                    >
+                      {phoneCodes.map((p) => (
+                        <option key={p.country + p.code} value={p.code} style={{ backgroundColor: '#000', color: '#fff' }}>
+                          {p.country} {p.code}
+                        </option>
+                      ))}
+                    </select>
+                    <input 
+                      type="tel" 
+                      placeholder="TÉLÉPHONE (FACULTATIF)" 
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      className="bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase flex-1" 
+                    />
+                  </div>
                   <textarea required rows={4} placeholder={t.form_placeholder_message} className="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase resize-none" />
                   <button type="submit" className="w-full bg-[#FFD700] text-black py-8 font-black uppercase tracking-[0.5em] hover:bg-white transition-all shadow-xl">
                     {isSubmitting ? <Loader2 className="animate-spin mx-auto" /> : t.form_submit}
