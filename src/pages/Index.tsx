@@ -703,7 +703,7 @@ const App = () => {
 
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5 py-4 px-8 flex justify-between items-center">
         <div className="flex items-center gap-4 cursor-pointer" onClick={handleRedirect}>
-          <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-24 h-24 rounded-lg border border-[#FFD700]/50 object-cover" />
+          <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-32 h-32 rounded-lg border border-[#FFD700]/50 object-contain" />
           <div className="flex flex-col uppercase font-black italic leading-none tracking-tighter">
             <span className="text-2xl">Monkey <span className="text-[#FFD700]">At Work</span></span>
           </div>
@@ -942,7 +942,7 @@ const App = () => {
         <div className="max-w-[1400px] mx-auto pt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 text-sm">
           <div className="col-span-2 lg:col-span-2 space-y-8">
             <div className="flex items-center gap-4 cursor-pointer" onClick={handleRedirect}>
-              <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-20 h-20 rounded-xl" />
+              <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-28 h-28 rounded-xl object-contain" />
               <span className="text-3xl font-black uppercase italic tracking-tighter">Monkey <span className="text-[#FFD700]">At Work</span></span>
             </div>
             <p className="text-white/60 uppercase font-bold text-xs leading-loose max-w-sm">
