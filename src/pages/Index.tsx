@@ -942,7 +942,7 @@ const App = () => {
         <div className="max-w-[1400px] mx-auto pt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 text-sm">
           <div className="col-span-2 lg:col-span-2 space-y-8">
             <div className="flex items-center gap-4 cursor-pointer" onClick={handleRedirect}>
-              <img src="https://i.ibb.co/3WqPz3S/logo-monkey.jpg" alt="Logo MAW" className="w-16 h-16 rounded-xl" />
+              <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-20 h-20 rounded-xl" />
               <span className="text-3xl font-black uppercase italic tracking-tighter">Monkey <span className="text-[#FFD700]">At Work</span></span>
             </div>
             <p className="text-white/60 uppercase font-bold text-xs leading-loose max-w-sm">
