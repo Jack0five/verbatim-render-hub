@@ -832,7 +832,7 @@ const App = () => {
                     <input required placeholder={t.form_placeholder_name} className="bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase" />
                     <input required type="email" placeholder="CONTACT@EMAIL.COM" className="bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase" />
                   </div>
-                  <textarea required <textarea required rows={4} placeholder={t.form_placeholder_message} className="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase resize-none" /> placeholder={t.form_placeholder_message} className="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase resize-none" />
+                  <textarea required rows={4} placeholder={t.form_placeholder_message} className="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase resize-none" />
                   <button type="submit" className="w-full bg-[#FFD700] text-black py-8 font-black uppercase tracking-[0.5em] hover:bg-white transition-all shadow-xl">
                     {isSubmitting ? <Loader2 className="animate-spin mx-auto" /> : t.form_submit}
                   </button>
