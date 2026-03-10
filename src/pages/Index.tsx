@@ -708,7 +708,7 @@ const App = () => {
             <span className="text-2xl">Monkey <span className="text-[#FFD700]">At Work</span></span>
           </div>
         </div>
-        <div className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-widest text-white/50">
+        <div className="hidden lg:flex gap-8 text-xs font-black uppercase tracking-widest text-white/50">
           <a href="#univers" className="hover:text-[#FFD700] transition-colors">{t.nav_univers}</a>
           <a href="#logistique" className="hover:text-[#FFD700] transition-colors">{t.nav_logistique}</a>
           <a href="#contact" className="hover:text-[#FFD700] transition-colors">{t.nav_contact}</a>
