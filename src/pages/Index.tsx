@@ -856,7 +856,7 @@ const App = () => {
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
              <iframe 
                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
-               src="https://www.youtube.com/embed/8v6z2VjH9l4?autoplay=1&mute=1&controls=0&loop=1&playlist=8v6z2VjH9l4&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" 
+               src="https://www.youtube.com/embed/ydYDqZQpim8?autoplay=1&mute=1&controls=0&loop=1&playlist=ydYDqZQpim8&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" 
                title="Live Logistics Camera" 
                frameBorder="0" 
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
