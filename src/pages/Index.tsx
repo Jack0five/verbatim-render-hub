@@ -100,7 +100,7 @@ const translations = {
     nav_boutiques: "BOUTIQUES",
     hero_title_1: "Le Retail de Qualité.",
     hero_title_2: "La Diversité sans Compromis!",
-    hero_subtitle: "Sourcé chez des centaines de fournisseurs qualifiés, vendu sur toutes les grandes marketplaces, livré avec l'excellence de",
+    hero_subtitle: "Sourcé chez des centaines de fournisseurs qualifiés, vendu sur toutes les grandes marketplaces mondiales, livré avec l'excellence de",
     hero_cta: "Découvrir nos produits",
     univers_title: "Nos",
     univers_span: "Univers",
