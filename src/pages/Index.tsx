@@ -635,8 +635,8 @@ const App = () => {
   ];
 
   const universes = [
-    { title: t.universes[0], icon: <Shirt size={40} />, img: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=800" },
-    { title: t.universes[1], icon: <Tv size={40} />, img: "https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=800" }, 
+    { title: t.universes[1], icon: <Tv size={40} />, img: "https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=800" },
+    { title: t.universes[0], icon: <Shirt size={40} />, img: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=800" }, 
     { title: t.universes[2], icon: <PawPrint size={40} />, img: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=800" },
     { title: t.universes[3], icon: <Baby size={40} />, img: "https://images.unsplash.com/photo-1510154221590-ff63e90a136f?q=80&w=800" }, 
     { title: t.universes[4], icon: <Bike size={40} />, img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800" },
