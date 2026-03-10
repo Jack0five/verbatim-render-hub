@@ -734,7 +734,7 @@ const App = () => {
                     <button 
                       key={l.code}
                       onClick={() => { setCurrentLang(l.code); setIsLangOpen(false); }}
-                      className={`w-full text-left px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-[#FFD700] hover:text-black transition-colors rounded-lg ${currentLang === l.code ? 'text-[#FFD700]' : 'text-white'}`}
+                      className={`w-full text-left px-4 py-2 text-xs font-black uppercase tracking-widest hover:bg-[#FFD700] hover:text-black transition-colors rounded-lg ${currentLang === l.code ? 'text-[#FFD700]' : 'text-white'}`}
                     >
                       {l.label}
                     </button>
