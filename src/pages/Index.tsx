@@ -708,7 +708,7 @@ const App = () => {
             <span className="text-2xl">Monkey <span className="text-[#FFD700]">At Work</span></span>
           </div>
         </div>
-        <div className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-widest text-white/50">
+        <div className="hidden lg:flex gap-8 text-xs font-black uppercase tracking-widest text-white/50">
           <a href="#univers" className="hover:text-[#FFD700] transition-colors">{t.nav_univers}</a>
           <a href="#logistique" className="hover:text-[#FFD700] transition-colors">{t.nav_logistique}</a>
           <a href="#contact" className="hover:text-[#FFD700] transition-colors">{t.nav_contact}</a>
@@ -718,7 +718,7 @@ const App = () => {
           <div className="relative">
             <button 
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white hover:text-[#FFD700] transition-colors"
+              className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-white hover:text-[#FFD700] transition-colors"
             >
               {currentLang} <ChevronDown size={14} className={`transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
             </button>
@@ -734,7 +734,7 @@ const App = () => {
                     <button 
                       key={l.code}
                       onClick={() => { setCurrentLang(l.code); setIsLangOpen(false); }}
-                      className={`w-full text-left px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-[#FFD700] hover:text-black transition-colors rounded-lg ${currentLang === l.code ? 'text-[#FFD700]' : 'text-white'}`}
+                      className={`w-full text-left px-4 py-2 text-xs font-black uppercase tracking-widest hover:bg-[#FFD700] hover:text-black transition-colors rounded-lg ${currentLang === l.code ? 'text-[#FFD700]' : 'text-white'}`}
                     >
                       {l.label}
                     </button>
