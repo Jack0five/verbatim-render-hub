@@ -5,7 +5,7 @@ import {
   Youtube, Send, Mail, X, Loader2, 
   ArrowRight, Globe, ShieldCheck, Zap, Heart, 
   PawPrint, TrendingUp, Brain, Tv, Trophy, Compass, Wrench, ChevronDown,
-  Instagram, Facebook, Hammer
+  Instagram, Facebook, Hammer, ArrowUp
 } from 'lucide-react';
 import * as THREE from 'three';
 
@@ -100,7 +100,7 @@ const translations = {
     nav_boutiques: "BOUTIQUES",
     hero_title_1: "Le Retail de Qualité.",
     hero_title_2: "La Diversité sans Compromis!",
-    hero_subtitle: "Sourcé chez des centaines de fournisseurs qualifiés, vendu sur toutes les grandes marketplaces, livré avec l'excellence de",
+    hero_subtitle: "Sourcé chez des centaines de fournisseurs qualifiés, vendu sur toutes les grandes marketplaces mondiales, livré avec l'excellence de",
     hero_cta: "Découvrir nos produits",
     univers_title: "Nos",
     univers_span: "Univers",
@@ -611,8 +611,21 @@ const App = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [phoneCode, setPhoneCode] = useState('+33');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const t = translations[currentLang];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const languages = [
     { code: 'FR', label: 'Français' },
@@ -622,8 +635,8 @@ const App = () => {
   ];
 
   const universes = [
-    { title: t.universes[0], icon: <Shirt size={40} />, img: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=800" },
-    { title: t.universes[1], icon: <Tv size={40} />, img: "https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=800" }, 
+    { title: t.universes[1], icon: <Tv size={40} />, img: "https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=800" },
+    { title: t.universes[0], icon: <Shirt size={40} />, img: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=800" }, 
     { title: t.universes[2], icon: <PawPrint size={40} />, img: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=800" },
     { title: t.universes[3], icon: <Baby size={40} />, img: "https://images.unsplash.com/photo-1510154221590-ff63e90a136f?q=80&w=800" }, 
     { title: t.universes[4], icon: <Bike size={40} />, img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800" },
@@ -702,7 +715,7 @@ const App = () => {
       <ScrollBackground />
 
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5 py-1 px-8 flex justify-between items-center">
-        <div className="flex items-center gap-4 cursor-pointer" onClick={handleRedirect}>
+        <div className="flex items-center gap-4 cursor-pointer" onClick={scrollToTop}>
           <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-32 h-32 rounded-lg border border-[#FFD700]/50 object-contain relative z-10" />
           <div className="flex flex-col uppercase font-black italic leading-none tracking-tighter">
             <span className="text-2xl">Monkey <span className="text-[#FFD700]">At Work</span></span>
@@ -767,7 +780,7 @@ const App = () => {
         </div>
       </section>
 
-      <div className="flex justify-center relative z-[40] -mb-12 md:-mb-16">
+      <div className="flex justify-center relative z-[40] -mb-12 md:-mb-16" style={{ marginTop: '-15px' }}>
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -843,7 +856,7 @@ const App = () => {
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
              <iframe 
                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
-               src="https://www.youtube.com/embed/8v6z2VjH9l4?autoplay=1&mute=1&controls=0&loop=1&playlist=8v6z2VjH9l4&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" 
+               src="https://www.youtube.com/embed/ydYDqZQpim8?autoplay=1&mute=1&controls=0&loop=1&playlist=ydYDqZQpim8&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" 
                title="Live Logistics Camera" 
                frameBorder="0" 
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -979,6 +992,20 @@ const App = () => {
           </div>
         </div>
       </footer>
+
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#FFD700] text-black rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,215,0,0.5)] hover:bg-white transition-colors"
+          >
+            <ArrowUp size={24} />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       <style>{`
         @keyframes marquee {
