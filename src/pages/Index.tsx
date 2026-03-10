@@ -718,7 +718,7 @@ const App = () => {
           <div className="relative">
             <button 
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white hover:text-[#FFD700] transition-colors"
+              className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-white hover:text-[#FFD700] transition-colors"
             >
               {currentLang} <ChevronDown size={14} className={`transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
             </button>
