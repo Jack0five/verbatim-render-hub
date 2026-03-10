@@ -5,7 +5,7 @@ import {
   Youtube, Send, Mail, X, Loader2, 
   ArrowRight, Globe, ShieldCheck, Zap, Heart, 
   PawPrint, TrendingUp, Brain, Tv, Trophy, Compass, Wrench, ChevronDown,
-  Instagram, Facebook, Hammer
+  Instagram, Facebook, Hammer, ArrowUp
 } from 'lucide-react';
 import * as THREE from 'three';
 
