@@ -611,8 +611,21 @@ const App = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [phoneCode, setPhoneCode] = useState('+33');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const t = translations[currentLang];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const languages = [
     { code: 'FR', label: 'Français' },
