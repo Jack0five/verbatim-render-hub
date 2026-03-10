@@ -780,7 +780,7 @@ const App = () => {
         </div>
       </section>
 
-      <div className="flex justify-center relative z-[40] -mb-12 md:-mb-16">
+      <div className="flex justify-center relative z-[40] -mb-12 md:-mb-16" style={{ marginTop: '-15px' }}>
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
