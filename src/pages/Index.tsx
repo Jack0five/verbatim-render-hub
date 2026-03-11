@@ -177,7 +177,7 @@ const translations = {
     form_email: "Business Email (Required)",
     form_message: "Your Message (Required)",
     form_placeholder_name: "YOUR NAME",
-    form_placeholder_message: "WHAT IS YOUR AMBITION?",
+    form_placeholder_message: "YOUR MESSAGE",
     form_submit: "Send Request",
     form_success_title: "Transmission Successful",
     form_success_msg: "We will get back to you instantly at contact@monkeyatwork.com",
