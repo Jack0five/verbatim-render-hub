@@ -716,7 +716,7 @@ const App = () => {
 
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5 py-1 px-8 flex justify-between items-center">
         <div className="flex items-center gap-4 cursor-pointer" onClick={scrollToTop}>
-          <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-32 h-32 rounded-lg border border-[#FFD700]/50 object-contain relative z-10" />
+          <img src="/images/logo-monkey.jpg" alt="Logo MAW" className="w-32 h-32 rounded-lg object-contain relative z-10" />
           <div className="flex flex-col uppercase font-black italic leading-none tracking-tighter">
             <span className="text-2xl">Monkey <span className="text-[#FFD700]">At Work</span></span>
           </div>
@@ -976,6 +976,8 @@ const App = () => {
             <ul className="space-y-4 text-white/50 font-bold uppercase text-[10px] tracking-widest">
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_about}</button></li>
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_expertise}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.nav_logistique}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_partners}</button></li>
             </ul>
           </div>
           <div className="space-y-6">
@@ -983,6 +985,8 @@ const App = () => {
             <ul className="space-y-4 text-white/50 font-bold uppercase text-[10px] tracking-widest">
               <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[0]}</button></li>
               <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[4]}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[1]}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[5]}</button></li>
             </ul>
           </div>
           <div className="space-y-6">
@@ -990,6 +994,8 @@ const App = () => {
             <ul className="space-y-4 text-white/50 font-bold uppercase text-[10px] tracking-widest">
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_mentions}</button></li>
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_cgu}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_confidentiality}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_press}</button></li>
             </ul>
           </div>
         </div>
