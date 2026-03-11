@@ -976,6 +976,8 @@ const App = () => {
             <ul className="space-y-4 text-white/50 font-bold uppercase text-[10px] tracking-widest">
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_about}</button></li>
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_expertise}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.nav_logistique}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_partners}</button></li>
             </ul>
           </div>
           <div className="space-y-6">
