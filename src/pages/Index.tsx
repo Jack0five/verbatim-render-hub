@@ -121,7 +121,7 @@ const translations = {
     form_email: "Email Professionnel (Obligatoire)",
     form_message: "Votre Message (Obligatoire)",
     form_placeholder_name: "VOTRE NOM",
-    form_placeholder_message: "QUELLE EST VOTRE AMBITION ?",
+    form_placeholder_message: "VOTRE MESSAGE",
     form_submit: "Envoyer la demande",
     form_success_title: "Transmission Réussie",
     form_success_msg: "Nous revenons vers vous instantanément avec l'adresse contact@monkeyatwork.com",
@@ -177,7 +177,7 @@ const translations = {
     form_email: "Business Email (Required)",
     form_message: "Your Message (Required)",
     form_placeholder_name: "YOUR NAME",
-    form_placeholder_message: "WHAT IS YOUR AMBITION?",
+    form_placeholder_message: "YOUR MESSAGE",
     form_submit: "Send Request",
     form_success_title: "Transmission Successful",
     form_success_msg: "We will get back to you instantly at contact@monkeyatwork.com",
@@ -233,7 +233,7 @@ const translations = {
     form_email: "Email Profesional (Obligatorio)",
     form_message: "Tu Message (Obligatorio)",
     form_placeholder_name: "TU NOMBRE",
-    form_placeholder_message: "¿CUÁL EST TU AMBICIÓN?",
+    form_placeholder_message: "SU MENSAJE",
     form_submit: "Enviar solicitud",
     form_success_title: "Transmisión Exitosa",
     form_success_msg: "Le responderemos al instante desde contact@monkeyatwork.com",
@@ -289,7 +289,7 @@ const translations = {
     form_email: "Geschäftliche E-Mail (Erforderlich)",
     form_message: "Ihre Nachricht (Erforderlich)",
     form_placeholder_name: "IHR NAME",
-    form_placeholder_message: "WAS IST IHRE AMBITION?",
+    form_placeholder_message: "IHRE NACHRICHT",
     form_submit: "Anfrage senden",
     form_success_title: "Übermittlung Erfolgreich",
     form_success_msg: "Wir melden uns umgehend bei Ihnen unter contact@monkeyatwork.com",
@@ -757,7 +757,7 @@ const App = () => {
             </AnimatePresence>
           </div>
 
-          <button onClick={handleRedirect} className="bg-[#FFD700] text-black px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+          <button onClick={handleRedirect} className="bg-[#FFD700] text-black px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(255,215,0,0.3)] rounded-md">
             {t.nav_boutiques}
           </button>
         </div>
@@ -784,7 +784,7 @@ const App = () => {
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="group relative bg-[#FFD700] text-black px-12 py-6 font-black text-xl tracking-[0.2em] uppercase overflow-hidden transition-all shadow-[0_0_40px_rgba(255,215,0,0.5)]"
+          className="group relative bg-[#FFD700] text-black px-12 py-6 font-black text-xl tracking-[0.2em] uppercase overflow-hidden transition-all shadow-[0_0_40px_rgba(255,215,0,0.5)] rounded-md"
           onClick={() => document.getElementById('univers').scrollIntoView({ behavior: 'smooth' })}
         >
           <span className="relative z-10 flex items-center gap-4">{t.hero_cta} <ArrowRight /></span>
