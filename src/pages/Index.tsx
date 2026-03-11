@@ -985,6 +985,8 @@ const App = () => {
             <ul className="space-y-4 text-white/50 font-bold uppercase text-[10px] tracking-widest">
               <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[0]}</button></li>
               <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[4]}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[1]}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.universes[5]}</button></li>
             </ul>
           </div>
           <div className="space-y-6">
