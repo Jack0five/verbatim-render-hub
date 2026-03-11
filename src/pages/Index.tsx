@@ -233,7 +233,7 @@ const translations = {
     form_email: "Email Profesional (Obligatorio)",
     form_message: "Tu Message (Obligatorio)",
     form_placeholder_name: "TU NOMBRE",
-    form_placeholder_message: "¿CUÁL EST TU AMBICIÓN?",
+    form_placeholder_message: "SU MENSAJE",
     form_submit: "Enviar solicitud",
     form_success_title: "Transmisión Exitosa",
     form_success_msg: "Le responderemos al instante desde contact@monkeyatwork.com",
