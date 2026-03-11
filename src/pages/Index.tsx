@@ -994,6 +994,8 @@ const App = () => {
             <ul className="space-y-4 text-white/50 font-bold uppercase text-[10px] tracking-widest">
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_mentions}</button></li>
               <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_cgu}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_confidentiality}</button></li>
+              <li><button onClick={handleRedirect} className="hover:text-white">{t.footer_press}</button></li>
             </ul>
           </div>
         </div>
