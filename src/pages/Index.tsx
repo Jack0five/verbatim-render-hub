@@ -289,7 +289,7 @@ const translations = {
     form_email: "Geschäftliche E-Mail (Erforderlich)",
     form_message: "Ihre Nachricht (Erforderlich)",
     form_placeholder_name: "IHR NAME",
-    form_placeholder_message: "WAS IST IHRE AMBITION?",
+    form_placeholder_message: "IHRE NACHRICHT",
     form_submit: "Anfrage senden",
     form_success_title: "Übermittlung Erfolgreich",
     form_success_msg: "Wir melden uns umgehend bei Ihnen unter contact@monkeyatwork.com",
