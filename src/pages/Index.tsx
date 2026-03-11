@@ -757,7 +757,7 @@ const App = () => {
             </AnimatePresence>
           </div>
 
-          <button onClick={handleRedirect} className="bg-[#FFD700] text-black px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+          <button onClick={handleRedirect} className="bg-[#FFD700] text-black px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(255,215,0,0.3)] rounded-md">
             {t.nav_boutiques}
           </button>
         </div>
