@@ -854,14 +854,17 @@ const App = () => {
           </div>
           
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
-             <iframe 
+             <video 
                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
-               src="https://www.youtube.com/embed/9eIHLgQY4qA?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" 
-               title="Live Logistics Camera" 
-               frameBorder="0" 
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowFullScreen
-             ></iframe>
+               autoPlay
+               muted
+               loop
+               playsInline
+               poster=""
+             >
+               <source src="https://static.videezy.com/system/resources/previews/000/041/884/original/warehouse.mp4" type="video/mp4" />
+               <source src="https://static.videezy.com/system/resources/previews/000/004/025/original/Containers.mp4" type="video/mp4" />
+             </video>
             <div className="absolute top-12 left-12 bg-[#FFD700] text-black px-8 py-4 font-black uppercase tracking-widest text-xs rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(255,215,0,0.5)] z-20">
               <span className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
               {t.live_badge}
