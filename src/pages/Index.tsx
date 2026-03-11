@@ -784,7 +784,7 @@ const App = () => {
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="group relative bg-[#FFD700] text-black px-12 py-6 font-black text-xl tracking-[0.2em] uppercase overflow-hidden transition-all shadow-[0_0_40px_rgba(255,215,0,0.5)]"
+          className="group relative bg-[#FFD700] text-black px-12 py-6 font-black text-xl tracking-[0.2em] uppercase overflow-hidden transition-all shadow-[0_0_40px_rgba(255,215,0,0.5)] rounded-md"
           onClick={() => document.getElementById('univers').scrollIntoView({ behavior: 'smooth' })}
         >
           <span className="relative z-10 flex items-center gap-4">{t.hero_cta} <ArrowRight /></span>
