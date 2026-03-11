@@ -945,7 +945,10 @@ const App = () => {
                     <span className="relative z-10 flex items-center justify-center gap-3">
                       {isSubmitting ? <Loader2 className="animate-spin" /> : <>
                         {t.form_submit}
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <span className="relative overflow-hidden w-5 h-5">
+                          <ArrowRight className="w-5 h-5 absolute transition-transform duration-300 ease-out group-hover:translate-x-6" />
+                          <ArrowRight className="w-5 h-5 absolute -translate-x-6 transition-transform duration-300 ease-out group-hover:translate-x-0" />
+                        </span>
                       </>}
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-white to-[#FFD700] opacity-0 group-hover:opacity-20 transition-opacity" />
