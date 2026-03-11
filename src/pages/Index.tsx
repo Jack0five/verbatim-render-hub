@@ -941,8 +941,14 @@ const App = () => {
                     />
                   </div>
                   <textarea required rows={4} placeholder={t.form_placeholder_message} className="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-[#FFD700] outline-none font-bold uppercase resize-none" />
-                  <button type="submit" className="w-full bg-[#FFD700] text-black py-8 font-black uppercase tracking-[0.5em] hover:bg-white transition-all shadow-xl">
-                    {isSubmitting ? <Loader2 className="animate-spin mx-auto" /> : t.form_submit}
+                  <button type="submit" className="w-auto min-w-[280px] mx-auto block bg-[#FFD700] text-black py-5 px-12 font-black uppercase tracking-[0.3em] rounded-md hover:bg-white hover:scale-105 hover:shadow-[0_0_30px_rgba(255,215,0,0.5)] active:scale-95 transition-all duration-300 ease-out border-2 border-transparent hover:border-[#FFD700] group overflow-hidden relative">
+                    <span className="relative z-10 flex items-center justify-center gap-3">
+                      {isSubmitting ? <Loader2 className="animate-spin" /> : <>
+                        {t.form_submit}
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </>}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-white to-[#FFD700] opacity-0 group-hover:opacity-20 transition-opacity" />
                   </button>
                 </form>
               )}
