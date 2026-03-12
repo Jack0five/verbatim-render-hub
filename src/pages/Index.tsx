@@ -856,32 +856,28 @@ const App = () => {
           </div>
           
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
-            <video 
-              className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              onLoadedData={() => setIsVideoReady(true)}
-              onCanPlay={() => setIsVideoReady(true)}
-              onError={() => setIsVideoError(true)}
-            >
-              <source src={logisticsFeed} type="video/mp4" />
-            </video>
-
-            {!isVideoReady && !isVideoError && (
-              <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50">
-                <Loader2 className="w-8 h-8 animate-spin text-[#FFD700]" />
-              </div>
-            )}
-
-            {isVideoError && (
-              <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/70 px-6 text-center">
-                <p className="text-sm md:text-base font-bold uppercase tracking-wider text-white/80">
-                  Flux vidéo temporairement indisponible
-                </p>
-              </div>
+            {/* YouTube Live Stream - Port de Southampton 24/7 */}
+            {!isVideoError ? (
+              <iframe
+                className="w-full h-full grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
+                src="https://www.youtube.com/embed/8o3S32QJDsY?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+                title="Live Port Stream"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ border: 'none' }}
+                onError={() => setIsVideoError(true)}
+              />
+            ) : (
+              <video
+                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              >
+                <source src={logisticsFeed} type="video/mp4" />
+              </video>
             )}
             <div className="absolute top-12 left-12 bg-[#FFD700] text-black px-8 py-4 font-black uppercase tracking-widest text-xs rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(255,215,0,0.5)] z-20">
               <span className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
