@@ -8,6 +8,7 @@ import {
   Instagram, Facebook, Hammer, ArrowUp
 } from 'lucide-react';
 import * as THREE from 'three';
+import logisticsFeed from '@/assets/logistics-feed.mp4';
 
 /**
  * COMPOSANT D'ARRIÈRE-PLAN ANIMÉ AU SCROLL (PARTICULES VISIBLES)
@@ -612,7 +613,8 @@ const App = () => {
   const [phoneCode, setPhoneCode] = useState('+33');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
-
+  const [isVideoReady, setIsVideoReady] = useState(false);
+  const [isVideoError, setIsVideoError] = useState(false);
   const t = translations[currentLang];
 
   useEffect(() => {
@@ -854,17 +856,33 @@ const App = () => {
           </div>
           
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
-             <video 
-               className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
-               autoPlay
-               muted
-               loop
-               playsInline
-               poster=""
-             >
-               <source src="https://static.videezy.com/system/resources/previews/000/041/884/original/warehouse.mp4" type="video/mp4" />
-               <source src="https://static.videezy.com/system/resources/previews/000/004/025/original/Containers.mp4" type="video/mp4" />
-             </video>
+            <video 
+              className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              onLoadedData={() => setIsVideoReady(true)}
+              onCanPlay={() => setIsVideoReady(true)}
+              onError={() => setIsVideoError(true)}
+            >
+              <source src={logisticsFeed} type="video/mp4" />
+            </video>
+
+            {!isVideoReady && !isVideoError && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50">
+                <Loader2 className="w-8 h-8 animate-spin text-[#FFD700]" />
+              </div>
+            )}
+
+            {isVideoError && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/70 px-6 text-center">
+                <p className="text-sm md:text-base font-bold uppercase tracking-wider text-white/80">
+                  Flux vidéo temporairement indisponible
+                </p>
+              </div>
+            )}
             <div className="absolute top-12 left-12 bg-[#FFD700] text-black px-8 py-4 font-black uppercase tracking-widest text-xs rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(255,215,0,0.5)] z-20">
               <span className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
               {t.live_badge}
