@@ -8,6 +8,7 @@ import {
   Instagram, Facebook, Hammer, ArrowUp
 } from 'lucide-react';
 import * as THREE from 'three';
+import logisticsFeed from '@/assets/logistics-feed.mp4';
 
 /**
  * COMPOSANT D'ARRIÈRE-PLAN ANIMÉ AU SCROLL (PARTICULES VISIBLES)
