@@ -613,7 +613,6 @@ const App = () => {
   const [phoneCode, setPhoneCode] = useState('+33');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isVideoReady, setIsVideoReady] = useState(false);
   const [isVideoError, setIsVideoError] = useState(false);
   const t = translations[currentLang];
 
