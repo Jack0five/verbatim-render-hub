@@ -790,7 +790,7 @@ const App = () => {
 
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         <Monkey3DHero />
-        <div className="relative z-20 max-w-6xl pt-20 flex flex-col items-center">
+        <div className="relative z-20 max-w-6xl pt-40 flex flex-col items-center">
           <motion.h1 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
