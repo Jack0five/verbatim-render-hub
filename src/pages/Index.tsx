@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import * as THREE from 'three';
 import logisticsFallbackHQ from '@/assets/logistics-fallback-hq.mp4';
+import longBeachIntro from '@/assets/long-beach-port.mp4';
 
 /**
  * COMPOSANT D'ARRIÈRE-PLAN ANIMÉ AU SCROLL (PARTICULES VISIBLES)
@@ -614,6 +615,9 @@ const App = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isVideoError, setIsVideoError] = useState(false);
+  const [introEnded, setIntroEnded] = useState(false);
+  const introVideoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
   const t = translations[currentLang];
 
   useEffect(() => {
@@ -623,6 +627,26 @@ const App = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Auto-play intro video when scrolled into view
+  useEffect(() => {
+    const video = introVideoRef.current;
+    if (!video || introEnded) return;
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [introEnded]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -855,7 +879,18 @@ const App = () => {
           </div>
           
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
-            {!isVideoError ? (
+            {!introEnded ? (
+              <video
+                ref={introVideoRef}
+                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
+                muted
+                playsInline
+                preload="auto"
+                onEnded={() => setIntroEnded(true)}
+              >
+                <source src={longBeachIntro} type="video/mp4" />
+              </video>
+            ) : !isVideoError ? (
               <iframe
                 className="w-full h-full grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
                 src="https://live.netcamviewer.nl/Port-of-Amsterdam-Havenkantoor/480"
