@@ -893,9 +893,10 @@ const App = () => {
             ) : !isVideoError ? (
               <iframe
                 className="w-full h-full grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
-                src="https://live.netcamviewer.nl/Port-of-Amsterdam-Havenkantoor/480"
-                title="Live Port Camera - Amsterdam"
-                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                src="https://www.youtube.com/embed/M09NaBVPjAI?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&loop=1&playlist=M09NaBVPjAI"
+                title="Live Port Camera - Rotterdam Amazonehaven"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
                 loading="lazy"
                 style={{ border: 'none' }}
                 onError={() => setIsVideoError(true)}
