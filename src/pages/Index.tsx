@@ -323,7 +323,7 @@ const translations = {
 
 const AnimatedCounter = ({ value, duration = 2 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
     damping: 30,
@@ -790,7 +790,7 @@ const App = () => {
 
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         <Monkey3DHero />
-        <div className="relative z-20 max-w-6xl pt-20 flex flex-col items-center">
+        <div className="relative z-20 max-w-6xl pt-40 flex flex-col items-center">
           <motion.h1 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -817,7 +817,9 @@ const App = () => {
         </motion.button>
       </div>
 
-      <MarketplacesMarquee />
+      <div className="mt-[100px]">
+        <MarketplacesMarquee />
+      </div>
 
       <section id="univers" className="py-32 px-8 max-w-[1800px] mx-auto mt-16 md:mt-24 relative z-10 bg-transparent">
         <h2 className="text-5xl lg:text-7xl font-black uppercase italic tracking-tighter mb-24">
