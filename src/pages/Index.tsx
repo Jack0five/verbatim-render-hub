@@ -648,6 +648,7 @@ const App = () => {
     return () => observer.disconnect();
   }, [introEnded]);
 
+  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
