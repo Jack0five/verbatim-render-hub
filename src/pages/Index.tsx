@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import * as THREE from 'three';
 import logisticsFallbackHQ from '@/assets/logistics-fallback-hq.mp4';
+import longBeachIntro from '@/assets/long-beach-port.mp4';
 
 /**
  * COMPOSANT D'ARRIÈRE-PLAN ANIMÉ AU SCROLL (PARTICULES VISIBLES)
