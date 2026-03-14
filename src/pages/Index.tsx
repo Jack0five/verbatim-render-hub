@@ -615,6 +615,9 @@ const App = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isVideoError, setIsVideoError] = useState(false);
+  const [introEnded, setIntroEnded] = useState(false);
+  const introVideoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
   const t = translations[currentLang];
 
   useEffect(() => {
