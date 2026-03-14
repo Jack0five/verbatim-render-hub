@@ -817,7 +817,9 @@ const App = () => {
         </motion.button>
       </div>
 
-      <MarketplacesMarquee />
+      <div className="mt-[100px]">
+        <MarketplacesMarquee />
+      </div>
 
       <section id="univers" className="py-32 px-8 max-w-[1800px] mx-auto mt-16 md:mt-24 relative z-10 bg-transparent">
         <h2 className="text-5xl lg:text-7xl font-black uppercase italic tracking-tighter mb-24">
