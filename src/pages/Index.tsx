@@ -628,7 +628,26 @@ const App = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
+  // Auto-play intro video when scrolled into view
+  useEffect(() => {
+    const video = introVideoRef.current;
+    if (!video || introEnded) return;
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [introEnded]);
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
