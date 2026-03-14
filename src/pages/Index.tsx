@@ -856,7 +856,18 @@ const App = () => {
           </div>
           
           <div className="relative h-[450px] lg:h-[550px] mt-8 lg:mt-0 rounded-[3rem] overflow-hidden group self-end border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-black">
-            {!isVideoError ? (
+            {!introEnded ? (
+              <video
+                ref={introVideoRef}
+                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
+                muted
+                playsInline
+                preload="auto"
+                onEnded={() => setIntroEnded(true)}
+              >
+                <source src={longBeachIntro} type="video/mp4" />
+              </video>
+            ) : !isVideoError ? (
               <iframe
                 className="w-full h-full grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105"
                 src="https://live.netcamviewer.nl/Port-of-Amsterdam-Havenkantoor/480"
